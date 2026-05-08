@@ -1,0 +1,60 @@
+{
+  "name": "task-manager-backend",
+  "version": "1.0.0",
+  "description": "A production-ready MERN task manager with JWT authentication, background reminder jobs, and real-time notifications for tracking and completing tasks efficiently.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yogesh1306/task-manager-backend.git"
+  },
+  "keywords": [
+    "mern",
+    "nodejs",
+    "express",
+    "mongodb",
+    "task-manager",
+    "socketio",
+    "bullmq",
+    "redis",
+    "ai"
+  ],
+  "license": "MIT",
+  "author": "Yogesh Joshi",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "worker:reminder": "node src/workers/reminder.worker.js",
+    "worker:cache": "node src/workers/cache.worker.js"
+  },
+  "dependencies": {
+    "@socket.io/redis-adapter": "^8.3.0",
+    "bcryptjs": "^3.0.3",
+    "bullmq": "^5.75.2",
+    "cloudinary": "^2.10.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.4.0",
+    "helmet": "^8.1.0",
+    "ioredis": "^5.10.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.4.1",
+    "multer": "^2.1.1",
+    "pino": "^10.3.1",
+    "pino-http": "^11.0.0",
+    "rate-limit-redis": "^4.3.1",
+    "socket.io": "^4.8.3",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "eslint": "^10.2.1",
+    "eslint-config-prettier": "^10.1.8",
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.8.3"
+  }
+}
