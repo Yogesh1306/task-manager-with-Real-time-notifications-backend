@@ -5,7 +5,6 @@ import path from 'node:path';
 import { errorHandler } from './middleware/error.middleware.js';
 import { globalLimiter } from './middleware/ratelimit.middleware.js';
 import helmet from 'helmet';
-import morgan from 'morgan';
 import { httpLogger } from './middleware/httplogger.middleware.js';
 import { getIO } from './config/socket.js';
 
@@ -13,11 +12,7 @@ const app = express();
 
 app.set('trust proxy', 1);
 
-if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('combined'));
-} else {
-  app.use(httpLogger);
-}
+app.use(httpLogger);
 
 const isProd = process.env.NODE_ENV === 'production';
 app.use(
