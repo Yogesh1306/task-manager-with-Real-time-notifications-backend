@@ -5,7 +5,7 @@ import path from 'node:path';
 import { errorHandler } from './middleware/error.middleware.js';
 import { globalLimiter } from './middleware/ratelimit.middleware.js';
 import helmet from 'helmet';
-import { httpLogger } from './middleware/httplogger.middleware.js';
+import { httpLogger } from './middleware/httpLogger.middleware.js';
 import { getIO } from './config/socket.js';
 
 const app = express();
