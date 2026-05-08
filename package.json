@@ -4,7 +4,7 @@
   "description": "A production-ready MERN task manager with JWT authentication, background reminder jobs, and real-time notifications for tracking and completing tasks efficiently.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Yogesh1306/task-manager-backend.git"
+    "url": "https://github.com/Yogesh1306/task-manager-with-Real-time-notifications-backend.git"
   },
   "keywords": [
     "mern",
