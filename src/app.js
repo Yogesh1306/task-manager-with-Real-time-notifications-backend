@@ -24,8 +24,8 @@ app.use(
             scriptSrc: ["'self'", 'https://cdn.socket.io'],
             connectSrc: [
               "'self'",
-              `${process.env.BACKEND_URL}/${PORT}`,
-              `wss:${process.env.BACKEND_URL}/${PORT}`,
+              `${process.env.BACKEND_URL}/${process.env.PORT}`,
+              `wss:${process.env.BACKEND_URL}/${process.env.PORT}`,
             ],
           },
         }
