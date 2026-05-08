@@ -225,3 +225,28 @@ npm run format
 ---
 
 ## 🏗️ Architecture Overview
+
+``` Client (React / Next.js)
+│
+▼
+Express REST API ──── MongoDB (Mongoose)
+│
+├──── Socket.IO ──── Redis Pub/Sub (multi-instance support)
+│
+└──── BullMQ ──────── Redis Queue
+│
+├── reminder.worker.js (scheduled reminders)
+└── cache.worker.js (cache invalidation)
+```
+
+---
+
+## 👤 Author
+
+**Yogesh Joshi** — [@Yogesh1306](https://github.com/Yogesh1306)
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE)
